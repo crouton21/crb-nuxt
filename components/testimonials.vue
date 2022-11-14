@@ -2,7 +2,7 @@
   <b-carousel
     id="carousel"
     v-model="slide"
-    :interval="4000"
+    :interval="6000"
     controls
     indicators
     @sliding-start="onSlideStart"

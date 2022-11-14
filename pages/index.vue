@@ -10,6 +10,7 @@
         </NuxtLink>
       </div>
     </div>
+    <div class="break"></div>
     <b-container>
       <b-row>
         <b-col>
@@ -104,6 +105,11 @@ export default {
   font-size: 40px;
   text-shadow: 2px 2px 4px #000000;
   text-transform: uppercase;
+}
+
+.break {
+  height: 20px;
+  background-color: #17a2b8;
 }
 
 </style>
