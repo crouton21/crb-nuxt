@@ -17,7 +17,7 @@
             </i>
           </b-col>
            <b-col>
-             <img src="@/assets/group-photo.jpg" />
+             <img src="@/assets/team.jpg" />
           </b-col>
         </b-row>
       </b-container>

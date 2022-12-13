@@ -16,7 +16,7 @@
         <br>
         <div id="phone">
           <h5>Phone</h5>
-          (907)-424-3355
+          (907) 424-3355
         </div>
       </b-column>
       <b-column class="footer-column hours">
