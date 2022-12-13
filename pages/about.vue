@@ -41,6 +41,7 @@
         </b-container>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -122,4 +123,8 @@ img {
   padding-top: 50px;
 }
 
+#brew-crew {
+  margin: 0 40px;
+  background-color: #15a3b8;
+}
 </style>

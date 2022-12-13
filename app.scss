@@ -1,14 +1,13 @@
 .bg-info {
-  // background-color: #512c2f !important;
-  opacity: 90%;
-  position: absolute;
   width: 100%;
   z-index: 1;
+  height: 110px;
+  border-bottom: 15px solid #006f85;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  color: #f8f3ed;
   text-shadow: 1px 1px 1px #000000;
 }
 
@@ -24,19 +23,12 @@ padding: 0 20px;
 }
 
 .page-body {
-  position: relative;
-  top: 56px;
   width: 100%;
-}
-
-@media only screen and (max-width: 1000px) {
-  .page-body {
-    top: 220px;
-  }
+  padding: 40px 0;
 }
 
 body {
-  font-family: 'Garamond';
+  font-family: 'Arial';
   margin: 0px;
   background-color: #f7f3ed;
   z-index: 999;

@@ -8,7 +8,6 @@
         <b-dropdown-item href="/about#our-brewery">OUR BREWERY</b-dropdown-item>
         <b-dropdown-item href="/about#brew-crew">BREW CREW</b-dropdown-item>
       </b-nav-item-dropdown>
-      <b-nav-item right href="/contact">CONTACT/HOURS</b-nav-item>
     </b-navbar-nav>
   </b-navbar>
 </template>

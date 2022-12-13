@@ -2,8 +2,26 @@
   <div>
     <Menu/>
     <div class="page-body">
-      <img alt="beer" src="@/assets/chalkboard.jpeg"/>
+      <b-container>
+        <b-col class="column_wrapper">
+          <b-row
+            v-for="(beer, index) in beers"
+            v-bind:style="{
+              color: colors[index % 3],
+            }">
+            <div class="beer-header">
+              <h5>{{beer.name}}</h5>
+              <div class="additional-info">
+              <span v-if="beer.IBU">IBU: {{beer.IBU}}</span>
+              <span v-if="beer.ABV">ABV: {{beer.ABV}}%</span>
+              </div>
+            </div>
+            <div class="description">{{beer.description}}</div>
+          </b-row>
+        </b-col>
+      </b-container>
     </div>
+    <Footer />
  </div>
 </template>
 
@@ -13,24 +31,50 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '@/app.scss'
+import beers from '@/data/beers'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 export default {
   data() {
-
+    return {
+      beers: beers,
+      colors: ['#FA4616','#008000','#17a2b8']
+    }
   }
 }
 </script>
 
 <style>
-img {
-  width: 70%;
-  height: auto;
-  object-fit: cover;
-  padding-top: 40px;
-}
-
 .page-body {
   text-align: center;
+}
+
+.column_wrapper {
+  column-count: 2;
+}
+
+.beer-header {
+  width: 100%;
+  display: inline-flex;
+}
+
+.additional-info {
+  margin-left: auto;
+}
+
+.additional-info > span {
+  padding: 0 5px;
+}
+
+.row {
+  padding: 30px;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+.description {
+  text-transform: uppercase;
 }
 </style>

@@ -3,7 +3,7 @@
     <div>
       <Menu/>
       <img class="the-brewery" alt="The brewery" src="@/assets/brewery.jpeg" />
-      <div id="img-text">Alaska’s newest brewery!</div>
+      <!-- <div id="img-text">Alaska’s newest brewery</div> -->
       <div class="arrow-container">
         <NuxtLink to="#testimonials">
           <img class="down-arrow" alt="down arrow" src="@/assets/double-arrow-down.png" />
@@ -23,6 +23,7 @@
         </b-col>
       </b-row>
     </b-container>
+    <Footer />
     </div>
 </template>
 
@@ -47,7 +48,7 @@ export default {
 <style lang="scss">
 
   .the-brewery {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     object-fit: cover;
   }
@@ -69,7 +70,7 @@ export default {
 
   .logo {
     mix-blend-mode: multiply;
-    background-color: #f7f3ed;
+    background-color: transparent;
     max-width: 100%;
   }
 
@@ -99,8 +100,8 @@ export default {
 #img-text {
   position: absolute;
   text-align: center;
-  width: 100%;
-  top: 50vh;
+  width: 47%;
+  top: 44vh;
   color: #f6f3ed;
   font-size: 40px;
   text-shadow: 2px 2px 4px #000000;
