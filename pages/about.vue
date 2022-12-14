@@ -1,6 +1,7 @@
 <template>
 <div>
-  <Menu/>
+  <Menu class="menu"/>
+  <MobileMenu class="mobile-menu"/>
   <div class="page-body">
     <div id="our-brewery">
       <b-container>

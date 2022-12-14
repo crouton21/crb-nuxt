@@ -58,4 +58,20 @@
   h5 {
     font-weight: 600;
   }
+
+  @media only screen and (max-width: 640px) {
+    .footer-logo {
+      display: none;
+    }
+
+    .footer {
+      display: block;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #phone {
+      padding-bottom: 40px;
+    }
+}
 </style>

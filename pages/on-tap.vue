@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Menu/>
+    <Menu class="menu"/>
+    <MobileMenu class="mobile-menu"/>
     <div class="page-body">
       <b-container>
         <b-col class="column_wrapper">
@@ -49,10 +50,6 @@ export default {
   text-align: center;
 }
 
-.column_wrapper {
-  column-count: 2;
-}
-
 .beer-header {
   width: 100%;
   display: inline-flex;
@@ -76,5 +73,17 @@ h5 {
 
 .description {
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 640px) {
+  .column_wrapper {
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column_wrapper {
+    column-count: 2;
+  }
 }
 </style>

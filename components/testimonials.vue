@@ -59,7 +59,7 @@ p.testimony {
 
 @media only screen and (max-width: 1000px) {
   p.testimony {
-    font-size: 7px;
+    font-size: 15px;
   }
 }
 

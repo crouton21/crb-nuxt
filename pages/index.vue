@@ -1,7 +1,8 @@
 <template>
   <div>
     <div>
-      <Menu/>
+      <Menu class="menu"/>
+      <MobileMenu class="mobile-menu"/>
       <img class="the-brewery" alt="The brewery" src="@/assets/brewery.jpeg" />
       <!-- <div id="img-text">Alaska’s newest brewery</div> -->
       <div class="arrow-container">
