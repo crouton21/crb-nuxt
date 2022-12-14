@@ -5,13 +5,13 @@
     <div class="page-body">
       <b-container>
         <b-col class="column_wrapper">
-          <b-row
+          <b-row class="beer-item"
             v-for="(beer, index) in beers"
             v-bind:style="{
               color: colors[index % 3],
             }">
             <div class="beer-header">
-              <h5>{{beer.name}}</h5>
+              <h5 class="beer-name">{{beer.name}}</h5>
               <div class="additional-info">
               <span v-if="beer.IBU">IBU: {{beer.IBU}}</span>
               <span v-if="beer.ABV">ABV: {{beer.ABV}}%</span>
@@ -67,7 +67,7 @@ export default {
   padding: 30px;
 }
 
-h5 {
+.beer-name {
   font-weight: 600;
 }
 
@@ -81,12 +81,26 @@ h5 {
     padding: 0;
   }
 
-  .row {
-    padding: 30px 5px;
+  .beer-item {
+    padding: 20px 10px;
+    display: grid;
   }
 
   .description {
     float: left;
+    padding-left: 5px;
+    text-align: left;
+  }
+
+  .beer-header {
+    display: block !important;
+    text-align: left;
+  }
+
+  .beer-name {
+    display: inline-block;
+    padding-left: 5px;
+    margin: 0
   }
 }
 
