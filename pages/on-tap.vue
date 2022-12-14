@@ -78,6 +78,15 @@ h5 {
 @media only screen and (max-width: 640px) {
   .column_wrapper {
     column-count: 1;
+    padding: 0;
+  }
+
+  .row {
+    padding: 30px 5px;
+  }
+
+  .description {
+    float: left;
   }
 }
 
@@ -86,4 +95,5 @@ h5 {
     column-count: 2;
   }
 }
+
 </style>

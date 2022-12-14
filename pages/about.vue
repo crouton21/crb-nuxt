@@ -128,4 +128,15 @@ img {
   margin: 0 40px;
   background-color: #15a3b8;
 }
+
+@media only screen and (max-width: 640px) {
+  .employee-photo {
+    height: 300px;
+  }
+
+  #brew-crew {
+    margin: 0;
+  }
+
+}
 </style>

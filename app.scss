@@ -86,6 +86,23 @@ body {
   .row {
     display: block;
   }
+
+  .dropdown-menu {
+    background-color: #17a2b8;
+    border: none;
+  }
+
+  .dropdown-item {
+    color: #f8f3ed;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .dropdown-item:hover {
+    color: rgba(255, 255, 255, 0.75);;
+    background-color: #17a2b8;
+  }
 }
 
 @media only screen and (min-width: 640px) {
