@@ -114,4 +114,10 @@ export default {
   background-color: #17a2b8;
 }
 
+@media only screen and (max-width: 640px) {
+  .the-brewery {
+    height: 70vh;
+  }
+}
+
 </style>
