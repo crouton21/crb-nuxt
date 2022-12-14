@@ -2,7 +2,7 @@
 <div>
   <Menu class="menu"/>
   <MobileMenu class="mobile-menu"/>
-  <div>
+  <div class="page-body">
     <div id="our-brewery">
       <b-container>
         <b-row class="header">
@@ -136,6 +136,10 @@ img {
 
   #brew-crew {
     margin: 0;
+  }
+
+  .container {
+    padding-top: 0;
   }
 
 }
