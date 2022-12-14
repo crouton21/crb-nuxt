@@ -116,7 +116,7 @@ export default {
 
 @media only screen and (max-width: 640px) {
   .the-brewery {
-    height: 70vh;
+    height: 72vh;
   }
 }
 
