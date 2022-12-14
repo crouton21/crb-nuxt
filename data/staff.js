@@ -3,7 +3,7 @@ module.exports = [
     name: 'Christiana Fincher',
     title: 'Owner/Founder',
     text: 'Cashing checks and breaking necks, Christiana is the logistical tour-de-force behind CRB. Despite her diminutive size and cheery smile, she has been known to strong arm grain suppliers into sourcing specialty wheat strains from war-torn nations.',
-    photo: 'Christiana.jpg'
+    photo: 'christiana.jpg'
   },
   {
     name: 'Curtis Fincher',
