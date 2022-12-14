@@ -2,7 +2,7 @@
 <div>
   <Menu class="menu"/>
   <MobileMenu class="mobile-menu"/>
-  <div class="page-body">
+  <div>
     <div id="our-brewery">
       <b-container>
         <b-row class="header">
