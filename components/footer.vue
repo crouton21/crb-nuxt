@@ -43,11 +43,15 @@
   }
 
   .footer-column.hours {
-    padding-top: 8vh;
+    padding-top: 40px;
   }
 
   .footer-column.contact {
-    padding-top: 8vh;
+    padding-top: 44px;
+  }
+
+  .footer.container {
+    padding-top: 0;
   }
 
   .footer {
@@ -68,6 +72,10 @@
       display: block;
       text-align: center;
       padding: 20px;
+    }
+
+    #address {
+      padding-top: 40px;
     }
 
     #phone {
