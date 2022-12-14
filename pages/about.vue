@@ -30,8 +30,8 @@
             <b-col></b-col>
           </b-row>
           <b-row v-for="employee in staff">
-            <b-col><img class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" /></b-col>
-            <b-col>
+            <b-col class="employee-photo-col"><img class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" /></b-col>
+            <b-col class="employee-info-col">
               <span class="employee-name">{{employee.name}}</span>
               <div class="employee-title">{{employee.title}}</div>
               <div>
@@ -140,6 +140,14 @@ img {
 
   .container {
     padding-top: 0;
+  }
+
+  .employee-photo-col {
+    padding-bottom: 0;
+  }
+
+  .employee-info-col {
+    padding-top: 20px;
   }
 
 }
