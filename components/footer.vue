@@ -8,21 +8,21 @@
           <p>507 1st Street</p>
           <p>Cordova, AK 99574</p>
         </div>
-        <br>
-        <div id="email">
-          <h5>Email</h5>
-          <p>copperriverbrew@gmail.com</p>
-        </div>
-        <br>
         <div id="phone">
           <h5>Phone</h5>
           (907) 424-3355
         </div>
       </b-column>
-      <b-column class="footer-column hours">
-        <h5>Hours</h5>
-        <p><b>Mon - Sun</b>: 3pm - 9pm</p>
-        <p id="last-call"><b>Last call</b>: 8pm</p>
+      <b-column class="footer-column">
+        <div class="hours">
+          <h5>Hours</h5>
+          <p><b>Every day</b>: 3pm - 9pm</p>
+          <p><b>Last call</b>: 8pm</p>
+        </div>
+        <div id="email">
+          <h5>Email</h5>
+          <p>copperriverbrew@gmail.com</p>
+        </div>
       </b-column>
     </b-row>
   </b-container>
@@ -32,26 +32,21 @@
   .footer-column {
     width: 33%;
     line-height: 6px;
+    align-items: center;
+    display: inline-grid;
+    padding: 105px 0;
   }
 
   .footer-logo {
-    max-width: 50%;
+    max-width: 65%;
     background-color: transparent;
     text-align: center;
     padding: 2vh 0;
     mix-blend-mode: multiply;
   }
 
-  .footer-column.hours {
-    padding-top: 40px;
-  }
-
-  .footer-column.contact {
-    padding-top: 44px;
-  }
-
   .footer.container {
-    padding-top: 0;
+    padding: 0 80px;
   }
 
   .footer {

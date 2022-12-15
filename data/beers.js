@@ -39,8 +39,5 @@ module.exports = [
     description: 'Made with Cordova kelp, comes with choice of syrup',
     IBU: 2,
     ABC: 4.7
-  },
-  {
-    name: 'Raeli\'s Root Beer'
   }
 ]

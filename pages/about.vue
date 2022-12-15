@@ -12,12 +12,14 @@
         <b-row>
           <b-col>
             <i>
-            Copper River Brewing was born of the simple observation that there are more cool people in Cordova than there are dry spaces. CRB is a space for artists, skiers, knitters, fishermen, pilots, welders, fish biologists, desk jockeys, and the many other talented and eccentric individuals who call Cordova home.
-            <br><br>
-            Also, beer!
+            Copper River Brewing was born of the simple observation that
+            there are more cool people in Cordova than there are dry spaces.
+            CRB is a space for artists, skiers, knitters, fishermen, pilots,
+            welders, fish biologists, desk jockeys, and the many other talented
+            and eccentric individuals who call Cordova home.
             </i>
           </b-col>
-           <b-col>
+           <b-col id="team-photo-col">
              <img src="@/assets/team.jpg" />
           </b-col>
         </b-row>
@@ -84,11 +86,6 @@ img {
   font-size: 30px;
 }
 
-#mission {
-  display: block;
-  text-align: center;
-}
-
 .employee-photo {
   width: 400px;
   height: 400px;
@@ -127,6 +124,10 @@ img {
 #brew-crew {
   margin: 0 40px;
   background-color: #15a3b8;
+}
+
+#team-photo-col {
+  padding: 0px 0px 40px 0px !important;
 }
 
 @media only screen and (max-width: 640px) {

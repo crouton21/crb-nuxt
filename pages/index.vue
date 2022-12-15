@@ -4,26 +4,8 @@
       <Menu class="menu"/>
       <MobileMenu class="mobile-menu"/>
       <img class="the-brewery" alt="The brewery" src="@/assets/brewery.jpeg" />
-      <!-- <div id="img-text">Alaska’s newest brewery</div> -->
-      <div class="arrow-container">
-        <NuxtLink to="#testimonials">
-          <img class="down-arrow" alt="down arrow" src="@/assets/double-arrow-down.png" />
-        </NuxtLink>
-      </div>
     </div>
     <div class="break"></div>
-    <b-container>
-      <b-row>
-        <b-col>
-          <p id="testimonials">
-            <Testimonials />
-          </p>
-        </b-col>
-        <b-col>
-          <img class="logo" src="@/assets/CopperRiverSIMPLE.jpg" />
-        </b-col>
-      </b-row>
-    </b-container>
     <Footer />
     </div>
 </template>
