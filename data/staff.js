@@ -4,7 +4,7 @@ module.exports = [
     title: 'Owner/Founder',
     text: `Christiana is the logistical tour-de-force behind CRB.
     Despite her diminutive size and cheery smile, she has been known
-    to strong arm grain suppliers into getting our shipments on the next barge.`,
+    to strong arm grain suppliers into getting shipments on the next barge.`,
     photo: 'Crouton.jpg'
   },
   {
