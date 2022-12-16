@@ -69,6 +69,7 @@ export default {
 .beer-header {
   width: 100%;
   display: inline-flex;
+  text-align: left;
 }
 
 .additional-info {
@@ -88,7 +89,7 @@ export default {
 }
 
 .description {
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-align: left;
 }
 
@@ -138,7 +139,6 @@ h3:after {
 
   .beer-header {
     display: block !important;
-    text-align: left;
   }
 
   .beer-name {

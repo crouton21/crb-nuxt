@@ -33,7 +33,7 @@ export default {
     height: 78vh;
     width: 100%;
     object-fit: cover;
-    border-bottom: 30px solid #f7f3ed;
+    border-bottom: 15px solid #f7f3ed;
   }
 
   .logo {

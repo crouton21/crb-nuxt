@@ -10,7 +10,7 @@
           </b-col>
           <b-col id="food-options-col">
             <p>
-              Food choices rotate nightly but are always delicious!
+              Food choices rotate nightly.
               All sandwiches made with home-baked bread.
             </p>
             <p>Go-tos include:</p>

@@ -18,8 +18,8 @@ module.exports = [
   {
     name: 'Micah Renfeldt',
     title: 'Head Brewer/Cofounder',
-    text: `Micah began growing his beard at the age of 9 in hopes of landing a
-    head brewer position. Thirty three years later, his plan paid off. He has been
+    text: `Micah began growing his beard at the age of 12 in hopes of landing a
+    head brewer position. Thirty years later, his plan paid off. He has been
     featured in GQ’s “Lumberjacks & Firefighters” edition for three years running.`,
     photo: 'micah.jpg'
   },
@@ -42,9 +42,9 @@ module.exports = [
   {
     name: 'Shae Bowman + Doris Burke',
     title: 'Restaurant Manager',
-    text: `Just as Sartre had De Beauvoir, Joe Hamm has Shae.
+    text: `Just as Sartre had Beauvoir, Joe has Shae.
     Shae is the pragmatist behind CRB's kitchen.
-    She has been known to mutter, “Joe is my cello.”`,
+    She has been known to mutter “Joe is my cello.”`,
     photo: 'Shae+Doris.jpg'
   },
   {
