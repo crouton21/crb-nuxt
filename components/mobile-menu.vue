@@ -4,6 +4,7 @@
     <b-navbar-nav v-bind:class = "(this.showMenu)?'show-menu':'hide-menu'">
       <b-nav-item right href="/">HOME</b-nav-item>
       <b-nav-item right href="/on-tap">ON TAP</b-nav-item>
+      <b-nav-item right href="/food">FOOD</b-nav-item>
       <b-nav-item-dropdown text="ABOUT" right>
         <b-dropdown-item href="/about#our-brewery">OUR BREWERY</b-dropdown-item>
         <b-dropdown-item href="/about#brew-crew">BREW CREW</b-dropdown-item>
