@@ -149,6 +149,7 @@ h3:after {
 
   #beer-photo-row {
     width: 100%;
+    padding: 20px 40px;
   }
 }
 

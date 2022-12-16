@@ -73,4 +73,13 @@ export default {
   #food-options-col {
     padding: 10px 40px;
   }
+
+  @media only screen and (max-width: 640px) {
+
+    #food-photo-col {
+      padding: 20px 40px;
+      max-width: 100%;
+    }
+
+  }
 </style>
