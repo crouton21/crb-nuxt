@@ -82,7 +82,7 @@ img {
 }
 
 .employee-name {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 30px;
 }
 
@@ -102,7 +102,7 @@ img {
     padding-bottom: 0px;
     text-align: center;
     h3 {
-      font-weight: 800;
+      font-weight: 700;
     }
     h3:after {
       content: '';

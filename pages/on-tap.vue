@@ -102,7 +102,7 @@ export default {
 }
 
 h3 {
-  font-weight: 800;
+  font-weight: 700;
   padding-top: 40px;
 }
 
