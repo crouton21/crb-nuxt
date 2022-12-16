@@ -50,14 +50,14 @@ module.exports = [
   {
     name: 'Abby Bourgeois',
     title: 'Beertender',
-    text: `Revolting from the family business of commercial fishing, Abby took
+    text: `Revolting against the family business of commercial fishing, Abby took
     a job at CRB only to find out that she still needs to wear
     Xtratuffs to work.`,
     photo: 'Abby.jpg'
   },
   {
     name: 'Gabby Brown',
-    title: 'Beertender/Yogi',
+    title: 'Substitute Beertender/Yogi',
     text: ``,
     photo: 'gabby.jpg'
   },
@@ -65,7 +65,7 @@ module.exports = [
     name: 'Naraa',
     title: 'Greeter',
     text: `Naraa is the financial wizard behind CRB. She invests all business
-    revenues into complex financial derivatives which CRB’s owners do not fully
+    revenues into financial derivatives which CRB’s owners do not fully
     understand. Prior to her work as Door Greeter at CRB, she was indicted  on
     federal charges of money laundering, triggering the psychic collapse that
     left her only able to bark.`,

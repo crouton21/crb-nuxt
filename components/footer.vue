@@ -41,7 +41,7 @@
     max-width: 65%;
     background-color: transparent;
     text-align: center;
-    padding: 2vh 0;
+    padding: 1vh 0;
     mix-blend-mode: multiply;
   }
 
@@ -55,7 +55,7 @@
   }
 
   h5 {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   @media only screen and (max-width: 640px) {

@@ -11,7 +11,7 @@
           <b-col id="food-options-col">
             <p>
               Food choices rotate nightly but are always delicious!
-              All sandwiches are made with home-baked bread.
+              All sandwiches made with home-baked bread.
             </p>
             <p>Go-tos include:</p>
             <p>
@@ -71,6 +71,6 @@ export default {
   }
 
   #food-options-col {
-    padding: 40px;
+    padding: 10px 40px;
   }
 </style>

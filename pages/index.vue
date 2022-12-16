@@ -5,7 +5,6 @@
       <MobileMenu class="mobile-menu"/>
       <img class="the-brewery" alt="The brewery" src="@/assets/brewery.jpeg" />
     </div>
-    <div class="break"></div>
     <Footer />
     </div>
 </template>
@@ -31,24 +30,10 @@ export default {
 <style lang="scss">
 
   .the-brewery {
-    height: 90vh;
+    height: 78vh;
     width: 100%;
     object-fit: cover;
-  }
-
-  .arrow-container {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 85vh;
-  }
-
-  .down-arrow {
-    z-index: 30;
-    height: 120px;
-    top: 85vh;
-    animation: updown 2s ease infinite;
-    filter: invert(75%);
+    border-bottom: 30px solid #f7f3ed;
   }
 
   .logo {
@@ -89,11 +74,6 @@ export default {
   font-size: 40px;
   text-shadow: 2px 2px 4px #000000;
   text-transform: uppercase;
-}
-
-.break {
-  height: 20px;
-  background-color: #17a2b8;
 }
 
 @media only screen and (max-width: 640px) {

@@ -40,7 +40,8 @@ padding: 0 20px;
 }
 
 body {
-  font-family: 'Arial';
+  font-family: 'Gill Sans';
+  font-size: 1.2em;
   margin: 0px;
   background-color: #f7f3ed;
   z-index: 999;
@@ -103,6 +104,10 @@ body {
     color: rgba(255, 255, 255, 0.75);;
     background-color: #17a2b8;
   }
+}
+
+b {
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 640px) {

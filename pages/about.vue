@@ -10,12 +10,12 @@
           <b-col></b-col>
         </b-row>
         <b-row>
-          <b-col>
+          <b-col id="team-desc-col">
             <i>
             Copper River Brewing was born of the simple observation that
             there are more cool people in Cordova than there are dry spaces.
             CRB is a space for artists, skiers, knitters, fishermen, pilots,
-            welders, fish biologists, desk jockeys, and the many other talented
+            welders, biologists, desk jockeys, and the many other talented
             and eccentric individuals who call Cordova home.
             </i>
           </b-col>
@@ -128,6 +128,10 @@ img {
 
 #team-photo-col {
   padding: 0px 0px 40px 0px !important;
+}
+
+#team-desc-col {
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 640px) {
