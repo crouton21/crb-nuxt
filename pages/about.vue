@@ -7,7 +7,7 @@
       <b-container>
         <b-row class="header">
           <b-col><h3>Our Brewery</h3></b-col>
-          <b-col id="hide-column">></b-col>
+          <b-col id="hide-column"></b-col>
         </b-row>
         <b-row>
           <b-col id="team-desc-col">
