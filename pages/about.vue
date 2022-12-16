@@ -70,6 +70,8 @@ export default {
 .employee-photo {
   height: 400px;
   width: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 img {
