@@ -146,6 +146,10 @@ h3:after {
     padding-left: 5px;
     margin: 0
   }
+
+  #beer-photo-row {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 640px) {
