@@ -82,7 +82,6 @@
     }
 
     #email {
-      display: inline-block;
       padding-bottom: 20px;
     }
 }
