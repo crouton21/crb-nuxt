@@ -7,7 +7,7 @@
       <b-container>
         <b-row class="header">
           <b-col><h3>Our Brewery</h3></b-col>
-          <b-col></b-col>
+          <b-col id="hide-column">></b-col>
         </b-row>
         <b-row>
           <b-col id="team-desc-col">
@@ -29,7 +29,7 @@
         <b-container>
           <b-row class="header">
             <b-col><h3>Brew Crew</h3></b-col>
-            <b-col></b-col>
+            <b-col id="hide-column"></b-col>
           </b-row>
           <b-row v-for="employee in staff">
             <b-col class="employee-photo-col"><img class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" /></b-col>
@@ -153,6 +153,14 @@ img {
 
   .employee-info-col {
     padding-top: 20px;
+  }
+
+  #team-desc-col {
+    padding-top: 10px;
+  }
+
+  #hide-column {
+    display: none;
   }
 
 }
