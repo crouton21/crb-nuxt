@@ -59,9 +59,9 @@
   }
 
   @media only screen and (max-width: 640px) {
-    .footer-logo {
+    /* .footer-logo {
       display: none;
-    }
+    } */
 
     .footer {
       display: block;
@@ -70,11 +70,20 @@
     }
 
     #address {
-      padding-top: 40px;
+      padding-top: 20px;
     }
 
     #phone {
-      padding-bottom: 40px;
+      padding-bottom: 20px;
+    }
+
+    .footer-column {
+      display: revert;
+    }
+
+    #email {
+      display: inline-block;
+      padding-bottom: 20px;
     }
 }
 </style>
