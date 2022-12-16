@@ -84,7 +84,7 @@ export default {
 }
 
 .beer-name {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .description {
