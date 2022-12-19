@@ -56,8 +56,14 @@ module.exports = [
     photo: 'Abby.jpg'
   },
   {
+    name: 'Harmony Graziano',
+    title: 'Beertender',
+    text: ``,
+    photo: 'Harmony.jpg'
+  },
+  {
     name: 'Gabby Brown',
-    title: 'Substitute Beertender/Yogi',
+    title: 'Beertender/Yogi',
     text: ``,
     photo: 'gabby.jpg'
   },
