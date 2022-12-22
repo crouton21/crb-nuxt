@@ -6,7 +6,7 @@
       <b-container>
         <b-row>
           <b-col cols="9" id="food-photo-col">
-            <img id="food-photo" src="@/assets/beer+micah.jpg" />
+            <img id="food-photo" src="@/assets/food.jpg" />
           </b-col>
           <b-col id="food-options-col">
             <p>
