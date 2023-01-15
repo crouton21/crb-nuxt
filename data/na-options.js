@@ -1,8 +1,5 @@
 module.exports = [
   {
-    name: 'Raeli\'s Root Beer'
-  },
-  {
     name: 'Ginger Beer'
   },
   {
