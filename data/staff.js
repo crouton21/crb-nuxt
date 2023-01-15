@@ -4,14 +4,13 @@ module.exports = [
     title: 'Owner/Founder',
     text: `Christiana is the logistical tour-de-force behind CRB.
     Despite her diminutive size and cheery smile, she has been known
-    to strong arm grain suppliers into getting shipments on the next barge.`,
+    to strong arm grain suppliers into getting CRB's shipments on the next barge.`,
     photo: 'Crouton.jpg'
   },
   {
     name: 'Curtis Fincher',
     title: 'Owner/Founder',
-    text: `After a failed career as a novelist, Curtis decided to start a brewery
-    as a commentary on the tastes of the American public. He is still negotiating
+    text: `A novelist by trade, Curtis decided to start a brewery after realizing that it's a lot easier to sell beer than to sell books. He is still negotiating
     a tenuous peace with the ghost in the brewery’s basement.`,
     photo: 'Curtis.jpg'
   },
@@ -27,7 +26,7 @@ module.exports = [
     name: 'Jake Borst',
     title: 'Taproom Manager',
     text: `Jake is the head coach of Cordova Wolverines basketball,
-    although his age is starting to show on the court. He is the spiritual center
+    although his age is starting to show on the court. He is the heart
     of CRB and impossible to dislike.`,
     photo: 'Jake.jpg'
   },
@@ -42,7 +41,7 @@ module.exports = [
   {
     name: 'Shae Bowman + Doris Burke',
     title: 'Restaurant Manager',
-    text: `Just as Sartre had Beauvoir, Joe has Shae.
+    text: `Just as Simon had Garfunkel, Joe has Shae.
     Shae is the pragmatist behind CRB's kitchen.
     She has been known to mutter “Joe is my cello.”`,
     photo: 'Shae+Doris.jpg'

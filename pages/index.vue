@@ -3,7 +3,7 @@
     <div>
       <Menu class="menu"/>
       <MobileMenu class="mobile-menu"/>
-      <img class="the-brewery" alt="The brewery" src="@/assets/brewery_main.jpg" />
+      <img class="the-brewery" alt="The brewery" src="@/assets/brewery-cartoon-4.js.jpeg" />
     </div>
     <Footer />
     </div>
