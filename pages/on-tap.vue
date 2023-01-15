@@ -120,6 +120,7 @@ h3:after {
 #beer-photo-row {
   width: 65%;
   margin: auto;
+  display: block;
 }
 
 @media only screen and (max-width: 640px) {
