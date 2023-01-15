@@ -10,7 +10,8 @@ module.exports = [
   {
     name: 'Curtis Fincher',
     title: 'Owner/Founder',
-    text: `A novelist by trade, Curtis decided to start a brewery after realizing that it's a lot easier to sell beer than to sell books. He is still negotiating
+    text: `A writer by trade, Curtis decided to start a brewery after realizing 
+    that it's a lot easier to sell beer than to sell books. He is still negotiating
     a tenuous peace with the ghost in the brewery’s basement.`,
     photo: 'Curtis.jpg'
   },
