@@ -9,6 +9,10 @@
         <b-dropdown-item href="/about#our-brewery">OUR BREWERY</b-dropdown-item>
         <b-dropdown-item href="/about#brew-crew">BREW CREW</b-dropdown-item>
       </b-nav-item-dropdown>
+      <div class="side-by-side-nav">
+        <b-nav-item class="social-media-link" right href="https://www.facebook.com/profile.php?id=100083388390516"><img class="logo" alt="Facebook" src="@/assets/facebook-logo.png" /></b-nav-item>
+        <b-nav-item class="social-media-link" right href="https://www.instagram.com/copperriverbrewing/"><img class="logo" alt="Instagram" src="@/assets/instagram-logo.png" /></b-nav-item>
+      </div>
     </b-navbar-nav>
   </b-navbar>
 </template>
@@ -46,6 +50,17 @@ export default {
 
 .navbar-nav.hide-menu {
   display: none;
+}
+
+.nav-item > .nav-link {
+  .logo {
+    mix-blend-mode: normal;
+    height: 30px;
+  }
+}
+
+.side-by-side-nav {
+  display: inline-flex;
 }
 
 </style>
