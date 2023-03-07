@@ -18,12 +18,6 @@
                 <li><i>{{food[index]}}</i></li>
               </ul>
             </p>
-            <p>Rotating Menu includes:</p>
-            <p>
-              <ul v-for="(foodItem, index) in rotatingFood">
-                <li><i>{{rotatingFood[index]}}</i></li>
-              </ul>
-            </p>
             <br>
             <p>
               <span class="take-out">Take-out orders welcome!</span>
@@ -38,7 +32,6 @@
 
 <script>
 import food from '@/data/food'
-import rotatingFood from '@/data/rotating-food'
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -50,7 +43,6 @@ export default {
   data() {
     return {
       food: food,
-      rotatingFood: rotatingFood
     }
   }
 }
