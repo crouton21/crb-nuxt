@@ -32,7 +32,9 @@
             <b-col id="hide-column"></b-col>
           </b-row>
           <b-row v-for="employee in staff">
-            <b-col class="employee-photo-col"><img class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" /></b-col>
+            <b-col class="employee-photo-col">
+              <img v-if="employee.photo" class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" />
+            </b-col>
             <b-col class="employee-info-col">
               <span class="employee-name">{{employee.name}}</span>
               <div class="employee-title">{{employee.title}}</div>

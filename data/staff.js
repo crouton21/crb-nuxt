@@ -68,6 +68,16 @@ module.exports = [
     photo: 'Harmony.jpg'
   },
   {
+    name: 'Shelby Stoltzfus-Avis',
+    title: 'Beertender',
+    text: ``
+  },
+  {
+    name: 'Rita Spann',
+    title: 'Beertender',
+    text: ``
+  },
+  {
     name: 'Naraa',
     title: 'Greeter',
     text: `Naraa is the financial wizard behind CRB. She invests all business
