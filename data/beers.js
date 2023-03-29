@@ -41,12 +41,14 @@ module.exports = [
     ABC: 4.7
   },
   {
-    name: 'Iceworm Double IPA',
-    IBU: 55,
-    ABV: 7.9
+    name: 'Misanthrope Sour Red',
+    description: 'Earthy, notes of cherry',
+    IBU: 24,
+    ABV: 5.8
   },
-    {
+  {
     name: 'Busted Bridge Brown',
+    description: 'Medium bodied, malty, toasty',
     IBU: 26,
     ABV: 5
   }
