@@ -70,12 +70,14 @@ module.exports = [
   {
     name: 'Shelby Stoltzfus-Avis',
     title: 'Beertender',
-    text: ``
+    text: ``,
+    photo: 'shelby.jpg'
   },
   {
     name: 'Rita Spann',
     title: 'Beertender',
-    text: ``
+    text: ``,
+    photo: 'rita.jpg'
   },
   {
     name: 'Naraa',
