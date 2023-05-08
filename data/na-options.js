@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: 'Ginger Beer'
+    name: 'Raeli\'s Rootbeer'
   },
   {
     name: 'Peppermint Tea'

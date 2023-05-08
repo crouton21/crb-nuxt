@@ -56,12 +56,6 @@ module.exports = [
     photo: 'Abby.jpg'
   },
   {
-    name: 'Gabby Brown',
-    title: 'Beertender',
-    text: ``,
-    photo: 'gabby.jpg'
-  },
-  {
     name: 'Harmony Graziano',
     title: 'Beertender',
     text: ``,
@@ -72,12 +66,6 @@ module.exports = [
     title: 'Beertender',
     text: ``,
     photo: 'shelby.jpg'
-  },
-  {
-    name: 'Rita Spann',
-    title: 'Beertender',
-    text: ``,
-    photo: 'rita.jpg'
   },
   {
     name: 'Naraa',
