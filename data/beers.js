@@ -41,15 +41,26 @@ module.exports = [
     ABC: 4.7
   },
   {
-    name: 'Misanthrope Sour Red',
-    description: 'Earthy, notes of cherry',
-    IBU: 24,
-    ABV: 5.8
+    name: 'Nice Tips! Spruce Tip Wheat Ale',
+    description: 'Local spruce tips, fresh, bright, perky',
+    IBU: 17,
+    ABV: 6.6
   },
   {
     name: 'Busted Bridge Brown',
     description: 'Medium bodied, malty, toasty',
     IBU: 26,
     ABV: 5
-  }
+  },
+  {
+    name: 'Out of Bounds IPA',
+    description: 'West coast style IPA',
+    IBU: 39,
+    ABV: 7.4
+  },
+  {
+    name: 'Early Riser Sesson Ale',
+    description: 'Low alcohol, lighter fare for the health conscious',
+    ABV: 2
+  }g
 ]
