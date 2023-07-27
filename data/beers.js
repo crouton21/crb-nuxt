@@ -62,5 +62,5 @@ module.exports = [
     name: 'Early Riser Sesson Ale',
     description: 'Low alcohol, lighter fare for the health conscious',
     ABV: 2
-  }g
+  }
 ]
