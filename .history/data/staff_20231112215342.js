@@ -56,6 +56,14 @@ module.exports = [
     photo: 'Harmony.jpg'
   },
   {
+    name: 'Harmony Graziano',
+    title: 'Beertender',
+    text: `Harmony comes to CRB from Kauai by way of Manhattan.  The banning of her
+    CRB trivia nights has earned her comparisons to both James Dean and Julian
+    Assange.  She is equally at home with caustic acid and chalk markers.`,
+    photo: 'Harmony.jpg'
+  },
+  {
     name: 'Naraa',
     title: 'Greeter',
     text: `Naraa is the financial wizard behind CRB. She invests all business

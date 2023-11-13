@@ -48,12 +48,26 @@ module.exports = [
     photo: 'Shae+Doris.jpg'
   },
   {
+    name: 'Abby Bourgeois',
+    title: 'Beertender',
+    text: `Revolting against the family business of commercial fishing, Abby took
+    a job at CRB only to find out that she still needs to wear
+    Xtratuffs to work.`,
+    photo: 'Abby.jpg'
+  },
+  {
     name: 'Harmony Graziano',
-    title: 'Beertender/Cellerman',
+    title: 'Beertender',
     text: `Harmony comes to CRB from Kauai by way of Manhattan.  The banning of her
     CRB trivia nights has earned her comparisons to both James Dean and Julian
     Assange.  She is equally at home with caustic acid and chalk markers.`,
     photo: 'Harmony.jpg'
+  },
+  {
+    name: 'Shelby Stoltzfus-Avis',
+    title: 'Beertender',
+    text: ``,
+    photo: 'shelby.jpg'
   },
   {
     name: 'Naraa',

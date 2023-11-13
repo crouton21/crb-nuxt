@@ -16,7 +16,7 @@
       <b-column class="footer-column">
         <div class="hours">
           <h5>Hours</h5>
-          <p>3pm - 9pm  Monday-Saturday</p>
+          <p>3pm - 9pm  Monday - Saturday</p>
           <p>8pm last call</p>
         </div>
         <div id="email">
