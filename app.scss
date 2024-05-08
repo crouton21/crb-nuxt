@@ -32,7 +32,7 @@
 
 .navbar-nav.show-menu {
   .nav-item {
-    padding: 15px;
+    padding: 10px !important;
   }
 }
 
@@ -137,6 +137,7 @@ b {
 
   .bg-info.full-menu {
     background-color: #476c77 !important;
+    position: fixed;
   }
 
   .down-arrow {
