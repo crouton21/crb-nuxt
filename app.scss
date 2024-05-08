@@ -115,6 +115,7 @@ b {
 
   .page-body {
     padding: 0 10px;
+    // margin-top: 0 !important;
   }
 
   .navbar-expand-lg .navbar-nav {
@@ -123,7 +124,7 @@ b {
   }
 
   .nav-item > .nav-link {
-    padding-top: 0px;
+    padding: 0px;
   }
 
   .bg-info {
@@ -138,6 +139,7 @@ b {
   .bg-info.full-menu {
     background-color: #476c77 !important;
     position: fixed;
+    top: 0;
   }
 
   .down-arrow {
