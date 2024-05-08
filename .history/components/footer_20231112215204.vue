@@ -58,7 +58,7 @@
     font-weight: 700;
   }
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 768px) {
     /* .footer-logo {
       display: none;
     } */

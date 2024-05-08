@@ -110,13 +110,12 @@ img {
     }
     h3:after {
       content: '';
-      background-color: #000;
+      background-color: #303d40;
       height: 1px;
       display: block;
       position: absolute;
       top: 18px;
-      left: 0;
-      width: 100%;
+      width: 90%;
     }
   }
 }
@@ -125,9 +124,20 @@ img {
   padding-top: 50px;
 }
 
+#our-brewery {
+  padding-top: 70px;
+  h3, div {
+    color: #303d40;
+  }
+}
+
 #brew-crew {
   margin: 0 40px;
-  background-color: #15a3b8;
+  background-color: #476c77;
+  color: #dfe2ed;
+  h3:after {
+    background-color: #dfe2ed;
+  }
 }
 
 #team-photo-col {
@@ -138,7 +148,7 @@ img {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1140px) {
   .employee-photo {
     height: 300px;
   }
@@ -159,12 +169,18 @@ img {
     padding-top: 20px;
   }
 
-  #team-desc-col {
+  #team-desc-col, #team-photo-col {
     padding-top: 10px;
+    font-size: 30px;
+    padding-bottom: 150px !important;
   }
 
   #hide-column {
     display: none;
+  }
+
+  .employee-title, .employee-text {
+    font-size: 21px;
   }
 
 }

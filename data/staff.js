@@ -56,13 +56,15 @@ module.exports = [
     photo: 'Harmony.jpg'
   },
   {
-    name: 'Naraa',
-    title: 'Greeter',
-    text: `Naraa is the financial wizard behind CRB. She invests all business
-    revenues into financial derivatives which CRB’s owners do not fully
-    understand. Prior to her work as Door Greeter at CRB, she was indicted  on
-    federal charges of money laundering, triggering the psychic collapse that
-    left her only able to bark.`,
-    photo: 'naraa.JPEG'
+    name: 'Audrey Enyart',
+    title: 'Beertender',
+    text: '',
+    photo: ''
+  },
+  {
+    name: 'Stephen Phillips',
+    title: 'Cellerman',
+    text: '',
+    photo: ''
   }
 ]

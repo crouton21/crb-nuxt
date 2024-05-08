@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Menu class="menu"/>
-    <MobileMenu class="mobile-menu"/>
+    <Menu class="menu" variant="dark" />
+    <MobileMenu class="mobile-menu" variant="dark" />
     <div class="page-body">
       <b-container>
         <b-row id="beer-photo-row">
-          <img id="beer-photo" src="@/assets/beer+micah.jpg" />
+          <img id="beer-photo" src="@/assets/flight.jpg" />
         </b-row>
       </b-container>
       <b-container>
@@ -37,7 +37,7 @@
         </b-col>
       </b-container>
     </div>
-    <Footer />
+    <Footer variant="dark" />
  </div>
 </template>
 
@@ -62,8 +62,15 @@ export default {
 </script>
 
 <style>
+
+body {
+  background-color: #476c77;
+}
+
 .page-body {
   text-align: center;
+  color: #dfe2ed;
+  margin-top: 70px;
 }
 
 .beer-header {
@@ -78,6 +85,7 @@ export default {
 
 .additional-info > span {
   padding: 0 5px;
+  white-space: pre;
 }
 
 .row {
@@ -95,6 +103,7 @@ export default {
 
 #beer-photo {
   max-width: 100%;
+  border-radius: 225px;
 }
 
 .beer-item {
@@ -109,7 +118,7 @@ h3 {
 
 h3:after {
   content: '';
-  background-color: #000;
+  background-color: #dfe2ed;
   height: 1px;
   display: block;
   position: relative;
@@ -118,12 +127,11 @@ h3:after {
 }
 
 #beer-photo-row {
-  width: 65%;
   margin: auto;
   display: block;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
   .column_wrapper {
     column-count: 1;
     padding: 0;
@@ -154,7 +162,7 @@ h3:after {
   }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1140px) {
   .column_wrapper {
     column-count: 2;
   }

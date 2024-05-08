@@ -1,8 +1,17 @@
 module.exports = [
   {
-    name: 'Raeli\'s Rootbeer'
+    name: 'Early Riser Non-Alcoholic Beer'
   },
   {
-    name: 'Peppermint Tea'
+    name: 'Housemade Ginger Beer'
+  },
+  {
+    name: 'Cranberry-Lime Soda'
+  },
+  {
+    name: 'Hot Cocoa'
+  },
+  {
+    name: 'Assortment of Teas'
   }
 ]

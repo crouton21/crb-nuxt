@@ -3,10 +3,17 @@
     <div>
       <Menu class="menu"/>
       <MobileMenu class="mobile-menu"/>
-      <img class="the-brewery" alt="The brewery" src="@/assets/brewery-cartoon-4.js.jpeg" />
+      <div class="content page-body">
+        <div class="main-text-container">
+          <div class="main-text">
+            Servin' up good beer, good food and good vibes in Cordova,&nbsp;AK
+          </div>
+        </div>
+        <img class="main-img" alt="The brewery" src="@/assets/growler-download.jpg" />
+      </div>
     </div>
     <Footer />
-    </div>
+   </div>
 </template>
 
 <script>
@@ -29,11 +36,39 @@ export default {
 
 <style lang="scss">
 
-  .the-brewery {
-    height: 78vh;
-    width: 100%;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .main-text-container {
+    margin: auto;
+    width: 80%;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .main-text {
+    font-family: 'Lovely Groovy';
+    letter-spacing: 9px;
+    color: #303d40;
+    font-size: 100px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .main-img {
+    border-radius: 480px;
+    overflow: hidden;
+    width: 100vw;
+    aspect-ratio: 2 / 1;
     object-fit: cover;
-    border-bottom: 15px solid #f7f3ed;
+    margin: 10px 0;
   }
 
   .logo {
@@ -71,14 +106,12 @@ export default {
   width: 47%;
   top: 44vh;
   color: #f6f3ed;
-  font-size: 40px;
-  text-shadow: 2px 2px 4px #000000;
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 640px) {
-  .the-brewery {
-    height: 72vh;
+@media only screen and (max-width: 768px) {
+  .main-text {
+    font-size: 65px;
   }
 }
 
