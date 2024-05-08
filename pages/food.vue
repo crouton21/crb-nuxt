@@ -151,7 +151,7 @@ export default {
     text-align: center;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1140px) {
     #food-photo-col {
       padding: 20px 40px;
       max-width: 100%;
@@ -169,9 +169,22 @@ export default {
       text-align: center;
     }
 
+    .menu-sub-header {
+      margin-top: 0;
+    }
+
+    .food-photo {
+      border-radius: 50px;
+      padding: 15px;
+    }
+
+    hr {
+      margin-top: 20px;
+    }
+
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1140px) {
     .column_wrapper {
       column-count: 4;
     }

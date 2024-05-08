@@ -116,14 +116,14 @@ h3 {
   padding-top: 40px;
 }
 
-h3:after {
+h3:before {
   content: '';
   background-color: #dfe2ed;
   height: 1px;
   display: block;
   position: relative;
   width: 100%;
-  transform: translateY(-43px);
+  transform: translateY(-10px);
 }
 
 #beer-photo-row {
@@ -131,7 +131,7 @@ h3:after {
   display: block;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1140px) {
   .column_wrapper {
     column-count: 1;
     padding: 0;
@@ -160,6 +160,10 @@ h3:after {
     width: 100%;
     padding: 20px 40px;
   }
+
+  #beer-photo {
+    border-radius: 50px;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -168,4 +172,13 @@ h3:after {
   }
 }
 
+@media only screen and (max-width: 1140px) {
+  #beer-photo-row {
+    padding: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
 </style>

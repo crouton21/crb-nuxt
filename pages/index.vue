@@ -109,9 +109,19 @@ export default {
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1140px) {
+
+  .main-text-container {
+    display: block;
+    width: 100%;
+  }
+
   .main-text {
-    font-size: 65px;
+    font-size: 45px;
+  }
+
+  .main-img {
+    border-radius: 50px;
   }
 }
 

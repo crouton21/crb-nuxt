@@ -5,8 +5,8 @@
       <b-nav-item right href="/">HOME</b-nav-item>
       <b-nav-item right href="/on-tap">ON TAP</b-nav-item>
       <b-nav-item-dropdown text="FOOD" right>
-        <b-dropdown-item href="/food#menu">MENU</b-dropdown-item>
-        <b-dropdown-item href="/food#catering">CATERING</b-dropdown-item>
+        <b-dropdown-item class="sub-menu" href="/food#menu">MENU</b-dropdown-item>
+        <b-dropdown-item class="sub-menu" href="/food#catering">CATERING</b-dropdown-item>
       </b-nav-item-dropdown>
       <b-nav-item right href="/about">OUR BREWERY</b-nav-item>
       <div class="side-by-side-nav">
@@ -44,8 +44,6 @@ export default {
 }
 
 .hamburger-menu {
-  padding-left: 50px;
-  padding-top: 30px;
   font-size: 32px;
 }
 
@@ -62,6 +60,10 @@ export default {
 
 .side-by-side-nav {
   display: inline-flex;
+}
+
+li.sub-menu {
+  padding-top: 0px !important;
 }
 
 </style>

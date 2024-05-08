@@ -3,7 +3,7 @@
     <b-navbar-nav class="ml-auto">
       <b-nav-item right href="/">HOME</b-nav-item>
       <b-nav-item right href="/on-tap">ON TAP</b-nav-item>
-      <b-nav-item-dropdown text="FOOD" right>
+      <b-nav-item-dropdown text="FOOD" left>
         <b-dropdown-item href="/food#menu">MENU</b-dropdown-item>
         <b-dropdown-item href="/food#catering">CATERING</b-dropdown-item>
       </b-nav-item-dropdown>

@@ -20,7 +20,7 @@
             </i>
           </b-col>
            <b-col id="team-photo-col">
-             <img src="@/assets/team.jpg" />
+             <img id="team-photo" src="@/assets/team.jpg" />
           </b-col>
         </b-row>
       </b-container>
@@ -69,6 +69,10 @@ export default {
 </script>
 
 <style lang="scss">
+#team-photo {
+  border-radius: 50px;
+}
+
 .employee-photo {
   height: 400px;
   width: auto;
@@ -94,6 +98,7 @@ img {
   width: 400px;
   height: 400px;
   object-fit: cover;
+  border-radius: 50px;
 }
 
 .employee-title {
@@ -108,7 +113,7 @@ img {
     h3 {
       font-weight: 700;
     }
-    h3:after {
+    h3:before {
       content: '';
       background-color: #303d40;
       height: 1px;
@@ -135,17 +140,13 @@ img {
   margin: 0 40px;
   background-color: #476c77;
   color: #dfe2ed;
-  h3:after {
+  h3:before {
     background-color: #dfe2ed;
   }
 }
 
 #team-photo-col {
   padding: 0px 0px 40px 0px !important;
-}
-
-#team-desc-col {
-  margin-top: 20px;
 }
 
 @media only screen and (max-width: 1140px) {
@@ -155,6 +156,19 @@ img {
 
   #brew-crew {
     margin: 0;
+    .container {
+      padding-top: 30px;
+      .header {
+        .col {
+          h3:before {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            margin-left: 5%;
+          }
+        }
+      }
+    }
   }
 
   .container {
@@ -170,9 +184,8 @@ img {
   }
 
   #team-desc-col, #team-photo-col {
-    padding-top: 10px;
-    font-size: 30px;
-    padding-bottom: 150px !important;
+    padding: 20px 0;
+    font-size: 20px;
   }
 
   #hide-column {
@@ -182,6 +195,16 @@ img {
   .employee-title, .employee-text {
     font-size: 21px;
   }
+
+  .header {
+  .col {
+    padding: 0;
+    h3:before {
+      width: 100%;
+      transform: translateY(-30px);
+    }
+  }
+}
 
 }
 </style>
