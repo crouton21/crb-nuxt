@@ -11,12 +11,12 @@ module.exports = [
   //   IBU: 19,
   //   ABV: 6
   // },
-  {
-    name: 'North Fill Porter',
-    description: 'Vanilla, a bit sweet, rich',
-    IBU: 24,
-    ABV: 5
-  },
+  // {
+  //   name: 'North Fill Porter',
+  //   description: 'Vanilla, a bit sweet, rich',
+  //   IBU: 24,
+  //   ABV: 5
+  // },
   // {
   //   name: 'Paulie Saison',
   //   description: 'Dry, floral, Belgian farmhouse ale',
@@ -24,17 +24,15 @@ module.exports = [
   //   ABV: 5.5
   // },
   {
-    name: 'Third Wheel Tripel',
+    name: 'Trapper Hat Belgian Ale',
     description: 'Spicy, fuity, aged with toasted oak',
-    IBU: 10,
-    ABV: 8.4
   },
-  {
-    name: 'Deckload Lager',
-    description: 'Sweet, balanced, smooth',
-    IBU: 18,
-    ABV: 6.6
-  },
+  // {
+  //   name: 'Deckload Lager',
+  //   description: 'Sweet, balanced, smooth',
+  //   IBU: 18,
+  //   ABV: 6.6
+  // },
   {
     name: 'Sandpiper Cream Ale',
     description: 'Light, casual, goes the distance',
@@ -46,7 +44,7 @@ module.exports = [
   //   ABV: 4.6
   // },
   {
-    name: 'Jala-Peach-O Seltzer',
+    name: 'Stawberry Lime Seltzer',
     description: ''
   },
   {
@@ -61,12 +59,12 @@ module.exports = [
     IBU: 2,
     ABC: 4.7
   },
-  // {
-  //   name: 'Nice Tips! Spruce Tip Wheat Ale',
-  //   description: 'Local spruce tips, fresh, bright, perky',
-  //   IBU: 17,
-  //   ABV: 6.6
-  // },
+  {
+    name: 'Nice Tips! Spruce Tip Wheat Ale',
+    description: 'Local spruce tips, fresh, bright, perky',
+    IBU: 17,
+    ABV: 6.6
+  },
   {
     name: 'Busted Bridge Brown',
     description: 'Medium bodied, malty, toasty',

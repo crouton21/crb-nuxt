@@ -24,14 +24,6 @@ module.exports = [
     photo: 'micah.jpg'
   },
   {
-    name: 'Jake Borst',
-    title: 'Taproom Manager',
-    text: `Jake is the head coach of Cordova Wolverines basketball,
-    although his age is starting to show on the court. He is the heart
-    of CRB and impossible to dislike.`,
-    photo: 'Jake.jpg'
-  },
-  {
     name: 'Joe Hamm',
     title: 'Chef',
     text: `Joe Hamm once spent a year in silence to better understand the gentle
@@ -48,6 +40,20 @@ module.exports = [
     photo: 'Shae+Doris.jpg'
   },
   {
+    name: 'Audrey Enyart',
+    title: 'Taproom Manager',
+    text: '',
+    photo: 'audrey.JPG'
+  },
+  {
+    name: 'Jake Borst',
+    title: 'Beertender',
+    text: `Jake is the head coach of Cordova Wolverines basketball,
+    although his age is starting to show on the court. He is the heart
+    of CRB and impossible to dislike.`,
+    photo: 'Jake.jpg'
+  },
+  {
     name: 'Harmony Graziano',
     title: 'Beertender/Cellerman',
     text: `Harmony comes to CRB from Kauai by way of Manhattan.  The banning of her
@@ -56,15 +62,25 @@ module.exports = [
     photo: 'Harmony.jpg'
   },
   {
-    name: 'Audrey Enyart',
-    title: 'Beertender',
-    text: '',
-    photo: ''
-  },
-  {
     name: 'Stephen Phillips',
     title: 'Cellerman',
     text: '',
-    photo: ''
+    photo: 'Stephen.JPG'
+  },
+  {
+    name: 'Shelby Stoltzfus-Avis',
+    title: 'Beertender',
+    text: '',
+    photo: 'shelby.jpg'
+  },
+  {
+    name: 'Tyler Beedle',
+    title: 'Beertender',
+    text: ''
+  },
+  {
+    name: 'Eliza Root',
+    title: 'Beertender',
+    text: ''
   }
 ]
