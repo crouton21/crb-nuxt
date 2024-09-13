@@ -46,14 +46,6 @@ module.exports = [
     photo: 'audrey.JPG'
   },
   {
-    name: 'Jake Borst',
-    title: 'Beertender',
-    text: `Jake is the head coach of Cordova Wolverines basketball,
-    although his age is starting to show on the court. He is the heart
-    of CRB and impossible to dislike.`,
-    photo: 'Jake.jpg'
-  },
-  {
     name: 'Harmony Graziano',
     title: 'Beertender/Cellerman',
     text: `Harmony comes to CRB from Kauai by way of Manhattan.  The banning of her
