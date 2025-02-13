@@ -71,8 +71,13 @@ module.exports = [
     text: ''
   },
   {
-    name: 'Eliza Root',
-    title: 'Beertender',
+    name: 'Caleb Horney',
+    title: 'Beertender/Cellerman',
+    text: ''
+  },
+  {
+    name: 'Dharma Tranxinger',
+    title: 'Beertender/Kitchen',
     text: ''
   }
 ]
