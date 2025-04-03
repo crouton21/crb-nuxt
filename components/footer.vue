@@ -23,7 +23,7 @@
           <b-column>
             <div id="hours">
               <h5>Hours</h5>
-              <p>3pm - 10pm  Monday-Saturday</p>
+              <p>12pm - 10pm  Monday-Saturday</p>
               <p>9pm last call</p>
             </div>
           </b-column>
