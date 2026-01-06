@@ -58,26 +58,5 @@ module.exports = [
     title: 'Cellerman',
     text: '',
     photo: 'Stephen.JPG'
-  },
-  {
-    name: 'Shelby Stoltzfus-Avis',
-    title: 'Beertender',
-    text: '',
-    photo: 'shelby.jpg'
-  },
-  {
-    name: 'Tyler Beedle',
-    title: 'Beertender',
-    text: ''
-  },
-  {
-    name: 'Caleb Horney',
-    title: 'Beertender/Cellerman',
-    text: ''
-  },
-  {
-    name: 'Dharma Tranxinger',
-    title: 'Beertender/Kitchen',
-    text: ''
   }
 ]
