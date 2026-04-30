@@ -24,24 +24,24 @@
       <div class="food-grid">
         <b-row class="food-photo-row">
           <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/blt.jpg" />
+            <img class="food-photo" src="@/assets/blt.jpg" loading="lazy" />
           </b-col>
           <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/chili.jpg" />
+            <img class="food-photo" src="@/assets/chili.jpg" loading="lazy" />
           </b-col>
           <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/burgersoysters.jpg" />
+            <img class="food-photo" src="@/assets/burgersoysters.jpg" loading="lazy" />
           </b-col>
         </b-row>
         <b-row class="food-photo-row">
           <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/steak.jpg" />
+            <img class="food-photo" src="@/assets/steak.jpg" loading="lazy" />
           </b-col>
           <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/bread.jpg" />
+            <img class="food-photo" src="@/assets/bread.jpg" loading="lazy" />
           </b-col>
           <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/tacos.jpg" />
+            <img class="food-photo" src="@/assets/tacos.jpg" loading="lazy" />
           </b-col>
         </b-row>
       </div>
@@ -69,6 +69,12 @@ export default {
   data() {
     return {
       food: food,
+    }
+  },
+  head() {
+    return {
+      title: 'Food Menu | Copper River Brewing',
+      meta: [{ hid: 'description', name: 'description', content: 'Nightly rotating food at Copper River Brewing, Cordova, AK — sandwiches on house-baked bread, local specials, and catering by Shae.' }]
     }
   }
 }
@@ -118,7 +124,7 @@ export default {
   }
 
   .menu-sub-header {
-    margin-top: 70px;
+    margin-top: 40px;
     font-size: 40px;
     font-family: "Lovely Groovy";
     padding-top: 40px;

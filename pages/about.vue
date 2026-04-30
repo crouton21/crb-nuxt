@@ -33,7 +33,7 @@
           </b-row>
           <b-row v-for="employee in staff">
             <b-col class="employee-photo-col">
-              <img v-if="employee.photo" class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" />
+              <img v-if="employee.photo" class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" loading="lazy" />
             </b-col>
             <b-col class="employee-info-col">
               <span class="employee-name">{{employee.name}}</span>
@@ -64,6 +64,12 @@ export default {
     return {
       staff: staff
     }
+  },
+  head() {
+    return {
+      title: 'Our Brewery | Copper River Brewing',
+      meta: [{ hid: 'description', name: 'description', content: 'Meet the crew behind Copper River Brewing — Cordova\'s community craft brewery for artists, fishermen, skiers, and everyone in between.' }]
+    }
   }
 }
 </script>
@@ -84,7 +90,7 @@ img {
   max-width: 100%;
 }
 
-.col {
+#our-brewery .col, #brew-crew .col {
   margin: auto;
   padding: 40px;
 }
@@ -125,12 +131,12 @@ img {
   }
 }
 
-.container {
+#our-brewery .container, #brew-crew .container {
   padding-top: 50px;
 }
 
 #our-brewery {
-  padding-top: 70px;
+  padding-top: 40px;
   h3, div {
     color: #303d40;
   }
@@ -138,8 +144,9 @@ img {
 
 #brew-crew {
   margin: 0 40px;
-  background-color: #476c77;
+  background-color: #334858;
   color: #dfe2ed;
+  border-radius: 20px;
   h3:before {
     background-color: #dfe2ed;
   }
@@ -171,7 +178,7 @@ img {
     }
   }
 
-  .container {
+  #our-brewery .container, #brew-crew .container {
     padding-top: 0;
   }
 

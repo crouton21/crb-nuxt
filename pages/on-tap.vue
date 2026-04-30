@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <div class="on-tap-wrapper">
     <Menu class="menu" variant="dark" />
     <MobileMenu class="mobile-menu" variant="dark" />
     <div class="page-body">
       <b-container>
         <b-row id="beer-photo-row">
-          <img id="beer-photo" src="@/assets/flight.jpg" />
+          <img id="beer-photo" src="@/assets/flight.jpg" loading="lazy" />
         </b-row>
       </b-container>
       <b-container>
         <h3>Beers On Tap</h3>
+        <p class="rotating-note">Our tap list rotates frequently — this may not reflect what's currently pouring.</p>
         <b-col class="column_wrapper">
           <b-row class="beer-item"
             v-for="(beer, index) in beers">
@@ -57,66 +58,81 @@ export default {
       beers: beers,
       naOptions: naOptions
     }
+  },
+  head() {
+    return {
+      title: 'On Tap | Copper River Brewing',
+      meta: [{ hid: 'description', name: 'description', content: 'Check what\'s on tap at Copper River Brewing in Cordova, AK. Rotating craft beers brewed in-house — list may change often.' }]
+    }
   }
 }
 </script>
 
 <style>
 
-body {
-  background-color: #476c77;
+.on-tap-wrapper {
+  background-color: #334858;
+  min-height: 100vh;
 }
 
-.page-body {
+.on-tap-wrapper .page-body {
   text-align: center;
   color: #dfe2ed;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
-.beer-header {
+.on-tap-wrapper .rotating-note {
+  color: #dfe2ed;
+  font-size: 0.9em;
+  opacity: 0.8;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.on-tap-wrapper .beer-header {
   width: 100%;
   display: inline-flex;
   text-align: left;
 }
 
-.additional-info {
+.on-tap-wrapper .additional-info {
   margin-left: auto;
 }
 
-.additional-info > span {
+.on-tap-wrapper .additional-info > span {
   padding: 0 5px;
   white-space: pre;
 }
 
-.row {
+.on-tap-wrapper .row {
   padding: 30px;
 }
 
-.beer-name {
+.on-tap-wrapper .beer-name {
   font-weight: 700;
 }
 
-.description {
+.on-tap-wrapper .description {
   text-transform: lowercase;
   text-align: left;
 }
 
-#beer-photo {
+.on-tap-wrapper #beer-photo {
   max-width: 100%;
   border-radius: 225px;
 }
 
-.beer-item {
+.on-tap-wrapper .beer-item {
   display: inline-flex;
   width: 100%;
 }
 
-h3 {
+.on-tap-wrapper h3 {
   font-weight: 700;
   padding-top: 40px;
 }
 
-h3:before {
+.on-tap-wrapper h3:before {
   content: '';
   background-color: #dfe2ed;
   height: 1px;
@@ -126,58 +142,57 @@ h3:before {
   transform: translateY(-10px);
 }
 
-#beer-photo-row {
+.on-tap-wrapper #beer-photo-row {
   margin: auto;
   display: block;
 }
 
 @media only screen and (max-width: 1140px) {
-  .column_wrapper {
+  .on-tap-wrapper .column_wrapper {
     column-count: 1;
     padding: 0;
   }
 
-  .beer-item {
+  .on-tap-wrapper .beer-item {
     padding: 20px 10px;
   }
 
-  .description {
+  .on-tap-wrapper .description {
     padding-left: 5px;
     text-align: left;
   }
 
-  .beer-header {
+  .on-tap-wrapper .beer-header {
     display: block !important;
   }
 
-  .beer-name {
+  .on-tap-wrapper .beer-name {
     display: inline-block;
     padding-left: 5px;
-    margin: 0
+    margin: 0;
   }
 
-  #beer-photo-row {
+  .on-tap-wrapper #beer-photo-row {
     width: 100%;
-    padding: 20px 40px;
   }
 
-  #beer-photo {
+  .on-tap-wrapper #beer-photo {
     border-radius: 50px;
   }
 }
 
 @media only screen and (min-width: 1140px) {
-  .column_wrapper {
+  .on-tap-wrapper .column_wrapper {
     column-count: 2;
   }
 }
 
 @media only screen and (max-width: 1140px) {
-  #beer-photo-row {
+  .on-tap-wrapper #beer-photo-row {
     padding: 0;
   }
 
-  .container {
+  .on-tap-wrapper .container {
     padding: 0;
   }
 }

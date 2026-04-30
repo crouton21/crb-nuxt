@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index-page">
     <div>
       <Menu class="menu"/>
       <MobileMenu class="mobile-menu"/>
@@ -9,7 +9,7 @@
             Servin' up good beer, good food and good vibes in Cordova,&nbsp;AK
           </div>
         </div>
-        <img class="main-img" alt="The brewery" src="@/assets/growler-download.jpg" />
+        <img class="main-img" alt="The brewery" src="@/assets/growler-download.jpg" fetchpriority="high" />
       </div>
     </div>
     <Footer />
@@ -21,16 +21,18 @@ import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import VueScrollTo from 'vue-scrollto'
 import '@/app.scss'
-import testimonials from '../components/testimonials.vue'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-Vue.use(VueScrollTo)
 
 export default {
-  components: { testimonials },
-  name: 'IndexPage'
+  name: 'IndexPage',
+  head() {
+    return {
+      title: 'Copper River Brewing | Craft Beer in Cordova, AK',
+      meta: [{ hid: 'description', name: 'description', content: 'Copper River Brewing — craft beer, homemade food, and good vibes in Cordova, Alaska.' }]
+    }
+  }
 }
 </script>
 
@@ -38,37 +40,35 @@ export default {
 
   .content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    min-height: calc(100vh - 110px);
+    gap: 40px;
+    padding: 20px 0;
   }
 
   .main-text-container {
-    margin: auto;
     width: 80%;
-    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
   }
 
   .main-text {
     font-family: 'Lovely Groovy';
     letter-spacing: 9px;
     color: #303d40;
-    font-size: 100px;
-    margin: auto;
+    font-size: 65px;
     text-align: center;
   }
-  
+
   .main-img {
-    border-radius: 480px;
+    width: 85%;
+    aspect-ratio: 3 / 1;
+    border-radius: 200px;
     overflow: hidden;
-    width: 100vw;
-    aspect-ratio: 2 / 1;
     object-fit: cover;
-    margin: 10px 0;
   }
 
   .logo {
@@ -77,11 +77,11 @@ export default {
     max-width: 100%;
   }
 
-  .container {
+  .index-page .container {
     display: flex;
   }
 
-  .col {
+  .index-page .col {
     margin: auto;
     padding: 50px;
   }
@@ -110,10 +110,14 @@ export default {
 }
 
 @media only screen and (max-width: 1140px) {
+  .content {
+    min-height: auto;
+    gap: 20px;
+  }
 
   .main-text-container {
-    display: block;
     width: 100%;
+    margin-top: 30px;
   }
 
   .main-text {
@@ -121,6 +125,8 @@ export default {
   }
 
   .main-img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
     border-radius: 50px;
   }
 }

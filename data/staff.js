@@ -52,11 +52,5 @@ module.exports = [
     CRB trivia nights has earned her comparisons to both James Dean and Julian
     Assange.  She is equally at home with caustic acid and chalk markers.`,
     photo: 'Harmony.jpg'
-  },
-  {
-    name: 'Stephen Phillips',
-    title: 'Cellerman',
-    text: '',
-    photo: 'Stephen.JPG'
   }
 ]

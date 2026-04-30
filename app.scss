@@ -10,24 +10,59 @@
 }
 
 .bg-info.dark {
-  background-color: #476c77 !important;
+  background-color: #334858 !important;
 }
 
+/* Default nav links — light navbar (#dfe2ed bg) */
 .navbar-dark .navbar-nav .nav-link {
   font-size: 20px;
-  color: #eeb071;
+  color: #8c5000;
+  transition: color 0.15s ease;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #eeb071;
+  color: #5a3200;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link {
+  color: #5a3200;
+}
+
+/* Dark navbar variant — orange passes on #334858 at 4.88:1 */
+.bg-info.dark .navbar-nav .nav-link {
   color: #eeb071;
 }
 
-.dropdown-item:hover {
+.bg-info.dark .navbar-nav .nav-link:hover {
+  color: #fdecd4;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Active page indicator — b-nav-item puts the class on the <a>, dropdown puts it on the <li> */
+.nav-link.router-link-exact-active,
+.nav-link.nuxt-link-exact-active,
+.nav-item.router-link-exact-active > .nav-link,
+.nav-item.nuxt-link-exact-active > .nav-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Mobile open menu — bg is dark #334858, so links must be light */
+.bg-info.full-menu .navbar-nav .nav-link {
   color: #eeb071;
+}
+
+.bg-info.full-menu .navbar-nav .nav-link:hover {
+  color: #fdecd4;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.bg-info.full-menu .navbar-nav .show > .nav-link {
+  color: #fdecd4;
 }
 
 .navbar-nav.show-menu {
@@ -37,11 +72,11 @@
 }
 
 .nav-item {
-padding: 0 20px;
+  padding: 0 20px;
 }
 
-.navbar{
-  img{
+.navbar {
+  img {
     mix-blend-mode: multiply;
     height: 40px;
   }
@@ -63,7 +98,7 @@ body {
   font-size: 1.2em;
   margin: 0px;
   z-index: 999;
-  animation: fadein 2s;
+  animation: fadein 0.5s;
   overflow: scroll;
 }
 
@@ -72,13 +107,21 @@ body {
   to   { opacity: 1; }
 }
 
+/* Dropdown items — desktop (light bg), #8c5000 gives 5:1 on #dfe2ed */
 .dropdown-item {
-  color: #eeb071;
+  color: #8c5000;
   font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-item:hover {
+  color: #5a3200;
+  background-color: rgba(140, 80, 0, 0.08);
 }
 
 .dropdown-item:active, .dropdown-item:focus {
-  background-color: gray;
+  background-color: rgba(140, 80, 0, 0.15);
+  color: #5a3200;
 }
 
 .img-fluid {
@@ -101,6 +144,14 @@ b {
 
   .dropdown-menu {
     background-color: #dfe2ed;
+    border: 1px solid rgba(48, 61, 64, 0.15);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 6px 0;
+  }
+
+  .dropdown-item {
+    padding: 8px 20px;
   }
 }
 
@@ -115,7 +166,6 @@ b {
 
   .page-body {
     padding: 0 10px;
-    // margin-top: 0 !important;
   }
 
   .navbar-expand-lg .navbar-nav {
@@ -137,7 +187,7 @@ b {
   }
 
   .bg-info.full-menu {
-    background-color: #476c77 !important;
+    background-color: #334858 !important;
     position: fixed;
     top: 0;
   }
@@ -154,8 +204,9 @@ b {
     border: none;
   }
 
+  /* Mobile dropdown sits on dark #334858 bg — orange passes at 4.88:1 */
   .dropdown-menu {
-    background-color: #476c77 !important;
+    background-color: #334858 !important;
     li {
       text-align: center;
       padding: 30px 0 0 0;
@@ -165,6 +216,11 @@ b {
   .dropdown-item {
     font-size: 20px;
     color: #eeb071;
+  }
+
+  .dropdown-item:hover {
+    color: #fdecd4;
+    background-color: rgba(255, 255, 255, 0.08);
   }
 
   ul {

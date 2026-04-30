@@ -4,36 +4,25 @@
     <b-container class="footer">
       <img class="footer-column footer-logo logo" src="@/assets/CopperRiverSIMPLE-transformed.jpg" />
       <div class="footer-grid">
-        <b-row>
-          <b-column>
-            <div id="address">
-              <h5>Address</h5>
-              <p>507 1st Street</p>
-              <p>Cordova,&nbsp;AK 99574</p>
-            </div>
-          </b-column>
-          <b-column>
-            <div id="phone">
-              <h5>Phone</h5>
-              <p>(907) 424-3355</p>
-            </div>
-          </b-column>
-        </b-row>
-        <b-row>
-          <b-column>
-            <div id="hours">
-              <h5>Hours</h5>
-              <p>12pm - 10pm  Monday-Saturday</p>
-              <p>9pm last call</p>
-            </div>
-          </b-column>
-          <b-column>
-            <div id="email">
-              <h5>Email</h5>
-              <p>copperriverbrew@gmail.com</p>
-            </div>
-          </b-column>
-        </b-row>
+        <div id="address">
+          <h5>Address</h5>
+          <p>507 1st Street</p>
+          <p>Cordova,&nbsp;AK 99574</p>
+        </div>
+        <div id="phone">
+          <h5>Phone</h5>
+          <p>(907) 424-3355</p>
+        </div>
+        <div id="hours">
+          <h5>Hours</h5>
+          <p>12pm - 10pm  Monday-Saturday</p>
+          <p>9pm last call</p>
+        </div>
+        <div id="email">
+          <h5>Email</h5>
+          <p>copperriverbrewingmanager@gmail.com (Audrey)</p>
+          <p>copperriverbrew@gmail.com (Christiana)</p>
+        </div>
       </div>
     </b-container>
   </span>
@@ -57,13 +46,17 @@
   .footer {
     max-width: 90%;
     display: flex !important;
+    padding-top: 20px;
   }
 
   .dark {
-    color: #dfe2ed;
-    hr {
-      background: #dfe2ed;
-    }
+    display: block;
+    background-color: #dfe2ed;
+    padding-bottom: 24px;
+  }
+
+  .dark hr {
+    display: none;
   }
 
   .footer-logo {
@@ -78,35 +71,16 @@
     filter: invert(33%) sepia(30%) saturate(329%) hue-rotate(178deg) brightness(95%) contrast(112%);
   }
 
-  .row {
-    grid-gap: 15%;
-    text-align: center;
-    justify-content: center;
-    padding: 0;
-  }
-
-  b-column {
-    min-width:300px;
-    div {
-      min-height: 130px;
-    }
-  }
-
   .footer-grid {
     flex: 1;
     align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    text-align: center;
     p, h5 {
       color: #303d40;
       margin-bottom: 8px;
-    }
-  }
-
-  .dark {
-    p, h5 {
-      color: #dfe2ed !important;
-    }
-    hr {
-      background: #dfe2ed !important;
     }
   }
 
@@ -120,16 +94,14 @@
       display: none;
     }
 
-    b-column {
-      div {
-        min-height: 0px;
-      }
-    }
-
     .footer {
       display: block;
       text-align: center;
       padding: 20px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
     }
 
     #address {
