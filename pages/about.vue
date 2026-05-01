@@ -1,217 +1,123 @@
+<script setup lang="ts">
+import { staff } from '~/data/staff'
+
+useSeo({
+  title: 'Our Brewery',
+  description: 'Meet the team behind Copper River Brewing — owners, brewers, chefs, and taproom crew serving Cordova, Alaska.',
+  path: '/about',
+})
+</script>
+
 <template>
-<div>
-  <Menu class="menu"/>
-  <MobileMenu class="mobile-menu"/>
-  <div class="page-body">
-    <div id="our-brewery">
-      <b-container>
-        <b-row class="header">
-          <b-col><h3>Our Brewery</h3></b-col>
-          <b-col id="hide-column"></b-col>
-        </b-row>
-        <b-row>
-          <b-col id="team-desc-col">
-            <i>
-            Copper River Brewing was born of the simple observation that
-            there are more cool people in Cordova than there are dry spaces.
-            CRB is a space for artists, skiers, knitters, fishermen, pilots,
-            welders, biologists, desk jockeys, and the many other talented
-            and eccentric individuals who call Cordova home.
-            </i>
-          </b-col>
-           <b-col id="team-photo-col">
-             <img id="team-photo" src="@/assets/team.jpg" />
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
-      <div id="brew-crew">
-        <b-container>
-          <b-row class="header">
-            <b-col><h3>Brew Crew</h3></b-col>
-            <b-col id="hide-column"></b-col>
-          </b-row>
-          <b-row v-for="employee in staff">
-            <b-col class="employee-photo-col">
-              <img v-if="employee.photo" class="employee-photo" v-bind:src="require(`@/assets/${employee.photo}`)" loading="lazy" />
-            </b-col>
-            <b-col class="employee-info-col">
-              <span class="employee-name">{{employee.name}}</span>
-              <div class="employee-title">{{employee.title}}</div>
-              <div>
-                <span class="employee-text">{{employee.text}}</span>
-              </div>
-            </b-col>
-          </b-row>
-        </b-container>
+  <div class="about page-body">
+    <section class="about-intro">
+      <div class="about-intro__text">
+        <h1>Our Brewery</h1>
+        <p>
+          Copper River Brewing was born of the simple observation that
+          there are more cool people in Cordova than there are dry spaces.
+          CRB is a space for artists, skiers, knitters, fishermen, pilots,
+          welders, biologists, desk jockeys, and the many other talented
+          and eccentric individuals who call Cordova home.
+        </p>
       </div>
-    </div>
-    <Footer />
+      <img
+        src="/images/team.jpg"
+        alt="The Copper River Brewing team"
+        class="about-intro__photo"
+        width="800"
+        height="600"
+        loading="lazy"
+       
+      />
+    </section>
+
+    <section class="brew-crew" aria-labelledby="crew-heading">
+      <h2 id="crew-heading" class="brew-crew__heading">Brew Crew</h2>
+      <StaffCard
+        v-for="member in staff"
+        :key="member.name"
+        :member="member"
+      />
+    </section>
   </div>
 </template>
 
-<script>
-import staff from '@/data/staff.js'
-import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import '@/app.scss'
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-export default {
-  data() {
-    return {
-      staff: staff
-    }
-  },
-  head() {
-    return {
-      title: 'Our Brewery | Copper River Brewing',
-      meta: [{ hid: 'description', name: 'description', content: 'Meet the crew behind Copper River Brewing — Cordova\'s community craft brewery for artists, fishermen, skiers, and everyone in between.' }]
-    }
-  }
-}
-</script>
-
-<style lang="scss">
-#team-photo {
-  border-radius: 50px;
-}
-
-.employee-photo {
-  height: 400px;
-  width: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-img {
-  max-width: 100%;
-}
-
-#our-brewery .col, #brew-crew .col {
-  margin: auto;
-  padding: 40px;
-}
-
-.employee-name {
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.employee-photo {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 50px;
-}
-
-.employee-title {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.header {
-  .col {
-    padding-bottom: 0px;
-    text-align: center;
-    h3 {
-      font-weight: 700;
-    }
-    h3:before {
-      content: '';
-      background-color: #303d40;
-      height: 1px;
-      display: block;
-      position: absolute;
-      top: 18px;
-      width: 90%;
-    }
-  }
-}
-
-#our-brewery .container, #brew-crew .container {
-  padding-top: 50px;
-}
-
-#our-brewery {
+<style scoped lang="scss">
+.about {
   padding-top: 40px;
-  h3, div {
-    color: #303d40;
-  }
 }
 
-#brew-crew {
-  margin: 0 40px;
-  background-color: #334858;
-  color: #dfe2ed;
-  border-radius: 20px;
-  h3:before {
-    background-color: #dfe2ed;
-  }
-}
+.about-intro {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px 40px;
 
-#team-photo-col {
-  padding: 0px 0px 40px 0px !important;
-}
-
-@media only screen and (max-width: 1140px) {
-  .employee-photo {
-    height: 300px;
+  @include mobile {
+    flex-direction: column;
+    padding: 0 0 20px;
   }
 
-  #brew-crew {
-    margin: 0;
-    .container {
-      padding-top: 30px;
-      .header {
-        .col {
-          h3:before {
-            width: 90%;
-            margin: auto;
-            text-align: center;
-            margin-left: 5%;
-          }
-        }
-      }
-    }
-  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: $color-text;
 
-  #our-brewery .container, #brew-crew .container {
-    padding-top: 0;
-  }
-
-  .employee-photo-col {
-    padding-bottom: 0;
-  }
-
-  .employee-info-col {
-    padding-top: 20px;
-  }
-
-  #team-desc-col, #team-photo-col {
-    padding: 20px 0;
-    font-size: 20px;
-  }
-
-  #hide-column {
-    display: none;
-  }
-
-  .employee-title, .employee-text {
-    font-size: 21px;
-  }
-
-  .header {
-  .col {
-    padding: 0;
-    h3:before {
+    &::before {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: $color-text;
       width: 100%;
-      transform: translateY(-30px);
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: $color-text;
+    font-style: italic;
+  }
+
+  &__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__photo {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: $radius-md;
+
+    @include mobile {
+      flex: none;
+      width: 100%;
+      max-height: 300px;
     }
   }
 }
 
+.brew-crew {
+  background-color: $color-bg-dark;
+  border-radius: 20px;
+  margin: 0 40px 40px;
+  padding: 20px 0;
+  color: $color-text-on-dark;
+
+  @include mobile {
+    margin: 0 0 20px;
+    border-radius: 0;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    padding: 20px 40px 10px;
+    color: $color-text-on-dark;
+  }
 }
 </style>

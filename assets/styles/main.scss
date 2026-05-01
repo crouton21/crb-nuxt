@@ -1,0 +1,381 @@
+// tokens injected globally via nuxt.config.ts additionalData — no import needed here
+
+@import 'reset';
+@import 'typography';
+@import 'mixins';
+
+// =============================================================================
+// Page shell
+// =============================================================================
+
+.page-body {
+  width: 100%;
+  padding: 0 80px;
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}
+
+// =============================================================================
+// Navbar
+// =============================================================================
+
+.navbar {
+  width: 100%;
+  height: $navbar-height;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $color-bg;
+  z-index: 100;
+  position: relative;
+
+  &.navbar--dark {
+    background-color: $color-bg-dark;
+  }
+
+  @include mobile {
+    height: auto;
+    padding: 0;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-link {
+  padding: 0 20px;
+  font-size: 20px;
+  color: $color-link;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover,
+  &.nuxt-link-exact-active,
+  &.router-link-exact-active {
+    color: $color-link-hover;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .navbar--dark & {
+    color: $color-link-dark;
+
+    &:hover,
+    &.nuxt-link-exact-active,
+    &.router-link-exact-active {
+      color: $color-link-hover-dark;
+    }
+  }
+}
+
+// Food dropdown
+.nav-dropdown {
+  position: relative;
+
+  &:hover .nav-dropdown__menu,
+  &:focus-within .nav-dropdown__menu {
+    display: block;
+  }
+}
+
+.nav-dropdown__trigger {
+  padding: 0 20px;
+  font-size: 20px;
+  color: $color-link;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: $font-body;
+
+  &:hover,
+  &.active {
+    color: $color-link-hover;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .navbar--dark & {
+    color: $color-link-dark;
+
+    &:hover,
+    &.active {
+      color: $color-link-hover-dark;
+    }
+  }
+}
+
+.nav-dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color-bg;
+  border: 1px solid rgba($color-text, 0.15);
+  border-radius: $radius-sm;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 6px 0;
+  min-width: 140px;
+  z-index: 200;
+
+  .navbar--dark & {
+    background-color: $color-bg-dark;
+  }
+}
+
+.nav-dropdown__item {
+  display: block;
+  padding: 8px 20px;
+  font-size: 20px;
+  color: $color-link;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-link-hover;
+    background-color: rgba($color-link, 0.08);
+  }
+
+  .navbar--dark & {
+    color: $color-link-dark;
+
+    &:hover {
+      color: $color-link-hover-dark;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+// Social icons
+.nav-social {
+  padding: 0 10px;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  color: $color-link;
+  transition: color 0.15s ease;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  .navbar--dark & {
+    color: $color-link-dark;
+
+    &:hover {
+      color: $color-link-hover-dark;
+    }
+  }
+}
+
+// Desktop nav
+.nav-desktop {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+// Mobile trigger button
+.nav-mobile-trigger {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 10px;
+  }
+}
+
+// Mobile hamburger button
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  color: $color-link;
+  padding: 20px;
+
+  @include mobile {
+    display: block;
+  }
+
+  &.navbar--dark {
+    color: $color-link-dark;
+  }
+}
+
+// Mobile full menu overlay
+.mobile-menu {
+  display: none;
+
+  &--open {
+    position: fixed;
+    inset: 0;
+    background-color: $color-bg-dark;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+  }
+}
+
+.mobile-menu__close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  color: $color-link-dark;
+  padding: 20px;
+}
+
+.mobile-nav-link {
+  padding: 20px;
+  font-size: 20px;
+  color: $color-link-dark;
+  text-align: center;
+  display: block;
+  width: 100%;
+  transition: color 0.15s ease;
+  text-decoration: none;
+
+  &:hover,
+  &.nuxt-link-exact-active,
+  &.router-link-exact-active {
+    color: $color-link-hover-dark;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.mobile-menu .nav-social {
+  color: $color-link-dark;
+
+  &:hover {
+    color: $color-link-hover-dark;
+  }
+}
+
+.mobile-dropdown-item {
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+  color: $color-link-dark;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-link-hover-dark;
+  }
+}
+
+// =============================================================================
+// Footer
+// =============================================================================
+
+.footer-wrap {
+  padding-bottom: 24px;
+
+  hr {
+    width: 90%;
+    margin: 60px auto 0;
+    border: none;
+    border-top: 3px solid $color-text;
+  }
+
+  &--dark {
+    background-color: $color-bg;
+    color: $color-text;
+
+    hr {
+      display: none;
+    }
+  }
+}
+
+.footer-inner {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.footer-logo {
+  flex-basis: 20%;
+  min-width: 0;
+  object-fit: contain;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.footer-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  text-align: center;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: $color-link;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-link-hover;
+      text-decoration: underline;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 0;
+    text-align: center;
+    padding: 0 20px;
+
+    > div {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+// =============================================================================
+// Theme — dark page wrapper (on-tap page)
+// =============================================================================
+
+.theme-dark {
+  background-color: $color-bg-dark;
+  color: $color-text-on-dark;
+  min-height: 100vh;
+}

@@ -1,0 +1,33 @@
+// =============================================================================
+// Design Tokens — single source of truth for all visual decisions
+// =============================================================================
+
+// Colors — backgrounds
+$color-bg: #dfe2ed;
+$color-bg-dark: #334858;
+$color-bg-cream: #f6f3ed;
+
+// Colors — text
+$color-text: #303d40;
+$color-text-on-dark: #dfe2ed;
+
+// Colors — links/accent (amber family)
+$color-link: #8c5000;
+$color-link-hover: #5a3200;
+$color-link-dark: #eeb071;
+$color-link-hover-dark: #fdecd4;
+
+// Typography
+$font-display: 'Lovely Groovy', cursive;
+$font-body: 'Gill Sans', system-ui, sans-serif;
+
+// Breakpoint (single breakpoint mirrors existing design)
+$bp-mobile: 1140px;
+
+// Border radii
+$radius-sm: 12px;
+$radius-md: 50px;
+$radius-lg: 200px;
+
+// Navbar height
+$navbar-height: 110px;

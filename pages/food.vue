@@ -1,198 +1,157 @@
+<script setup lang="ts">
+import { goTos } from '~/data/food'
+import { business } from '~/data/business'
+
+useSeo({
+  title: 'Food',
+  description: 'Homemade food at Copper River Brewing in Cordova, AK. Our menu rotates nightly — stop in to see what Joe is cooking. Catering available.',
+  path: '/food',
+})
+
+const foodPhotos = [
+  { src: '/images/blt.jpg', alt: 'BLT sandwich' },
+  { src: '/images/chili.jpg', alt: 'Bowl of chili' },
+  { src: '/images/burgersoysters.jpg', alt: 'Burgers and oysters' },
+  { src: '/images/steak.jpg', alt: 'Grilled steak' },
+  { src: '/images/bread.jpg', alt: 'Fresh bread' },
+  { src: '/images/tacos.jpg', alt: 'Fish tacos' },
+]
+</script>
+
 <template>
-  <div id="menu">
-    <Menu class="menu"/>
-    <MobileMenu class="mobile-menu"/>
-    <div class="page-body">
-      <div class="menu-headers">
-        <p class="menu-header">
-          Food choices rotate nightly. &nbsp All sandwiches made with home-baked bread.
-        </p>
-        <p class="menu-sub-header">Go-tos include:</p>
+  <div class="food page-body">
+    <section id="menu" class="food-menu">
+      <h1 class="food-intro">
+        Food choices rotate nightly.
+      </h1>
+
+      <p class="menu-sub-header">Go-tos include:</p>
+
+      <ul class="food-list">
+        <FoodTile v-for="item in goTos" :key="item" :name="item" />
+      </ul>
+
+      <p class="take-out">TAKE-OUT ORDERS WELCOME!</p>
+
+      <div class="food-photos">
+        <img
+          v-for="photo in foodPhotos"
+          :key="photo.src"
+          :src="photo.src"
+          :alt="photo.alt"
+          class="food-photo"
+          width="600"
+          height="600"
+          loading="lazy"
+         
+        />
       </div>
+    </section>
 
-      <b-container>
-        <b-col class="column_wrapper">
-          <b-row class="food-item"
-            v-for="(foodItem, index) in food">
-            <div class="description">{{food[index]}}</div>
-          </b-row>
-        </b-col>
-      </b-container>
-      
-      <p class="take-out">Take-out orders welcome!</p>
+    <hr class="section-divider">
 
-      <div class="food-grid">
-        <b-row class="food-photo-row">
-          <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/blt.jpg" loading="lazy" />
-          </b-col>
-          <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/chili.jpg" loading="lazy" />
-          </b-col>
-          <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/burgersoysters.jpg" loading="lazy" />
-          </b-col>
-        </b-row>
-        <b-row class="food-photo-row">
-          <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/steak.jpg" loading="lazy" />
-          </b-col>
-          <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/bread.jpg" loading="lazy" />
-          </b-col>
-          <b-col cols="4" class="food-photo-wrapper">
-            <img class="food-photo" src="@/assets/tacos.jpg" loading="lazy" />
-          </b-col>
-        </b-row>
-      </div>
-
-      <br>
-      <hr>
-      <div id="catering">Catering</div>
-      <p class="menu-headers">Yes, we cater!  Email Shae at crcouchpotatoes@gmail.com for catering requests.</p>
-
-    </div>
-    <Footer />
- </div>
+    <section id="catering" class="catering">
+      <h2 class="catering__heading">Catering</h2>
+      <p class="catering__text">
+        Yes, we cater! Email Shae at
+        <a href="mailto:crcouchpotatoes@gmail.com">crcouchpotatoes@gmail.com</a>
+        for catering requests.
+      </p>
+    </section>
+  </div>
 </template>
 
-<script>
-import food from '@/data/food'
-import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import '@/app.scss'
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-export default {
-  data() {
-    return {
-      food: food,
-    }
-  },
-  head() {
-    return {
-      title: 'Food Menu | Copper River Brewing',
-      meta: [{ hid: 'description', name: 'description', content: 'Nightly rotating food at Copper River Brewing, Cordova, AK — sandwiches on house-baked bread, local specials, and catering by Shae.' }]
+<style scoped lang="scss">
+.food {
+  text-align: center;
+  color: $color-text;
+  padding-top: 40px;
+}
+
+.food-intro {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.menu-sub-header {
+  font-family: $font-display;
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.food-list {
+  @include desktop {
+    columns: 4;
+  }
+
+  @include mobile {
+    columns: 1;
+  }
+}
+
+.take-out {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+
+.food-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.food-photo {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: $radius-lg;
+
+  @include mobile {
+    border-radius: $radius-md;
+  }
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid $color-text;
+  margin: 40px 0;
+  opacity: 0.3;
+}
+
+.catering {
+  padding-bottom: 40px;
+
+  &__heading {
+    font-family: $font-display;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+
+    a {
+      color: $color-link;
+
+      &:hover {
+        color: $color-link-hover;
+        text-decoration: underline;
+      }
     }
   }
 }
-</script>
-
-<style scoped>
-
-  .page-body {
-    margin-top: 70px;
-    div, p {
-      color: #303d40;
-    }
-  }
-  
-  #food-photos-col {
-    padding: 0 20px 0 0;
-  }
-
-  .col {
-    padding: 0px;
-  }
-
-  hr {
-    width: 75%;
-    background: #303d40;
-    margin-top: 60px;
-    border-width: 1px;
-  }
-
-  .take-out {
-    font-weight: 700;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-  }
-
-  #food-options-col {
-    padding: 10px 40px;
-  }
-
-  .menu-headers {
-    text-align: center;
-  }
-
-  .menu-header {
-    text-transform: uppercase;
-  }
-
-  .menu-sub-header {
-    margin-top: 40px;
-    font-size: 40px;
-    font-family: "Lovely Groovy";
-    padding-top: 40px;
-  }
-
-  .food-item {
-    padding: 20px 10px;
-    justify-content: center;
-    font-weight: 700;
-    color: #303d40;
-  }
-
-  .food-photo {
-    padding: 30px;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 200px;
-  }
-
-  .take-out {
-    text-align: center;
-  }
-
-  #catering {
-    font-size: 40px;
-    padding: 40px;
-    font-family: "Lovely Groovy";
-    text-align: center;
-  }
-
-  @media only screen and (max-width: 1140px) {
-    #food-photo-col {
-      padding: 20px 40px;
-      max-width: 100%;
-    }
-    .column_wrapper {
-      column-count: 1;
-      padding: 0;
-    }
-
-    .food-photo-wrapper {
-      max-width: 100%;
-    }
-
-    .container {
-      text-align: center;
-    }
-
-    .menu-sub-header {
-      margin-top: 0;
-    }
-
-    .food-photo {
-      border-radius: 50px;
-      padding: 15px;
-    }
-
-    hr {
-      margin-top: 20px;
-    }
-
-  }
-
-  @media only screen and (min-width: 1140px) {
-    .column_wrapper {
-      column-count: 4;
-    }
-  }
 </style>

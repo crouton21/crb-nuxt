@@ -1,0 +1,17 @@
+export const goTos: string[] = [
+  'Pepperoni Pizza',
+  'BLT',
+  'Grilled Cheese',
+  'Chili',
+  'Nachos',
+  'Fish Tacos',
+  'Clam Chowder',
+  'Oysters',
+  'Burgers',
+  'Chicken Strips',
+  'Fries',
+  'Onion Rings',
+  'Salad',
+  'Steak',
+  'Seasonal Specials',
+]

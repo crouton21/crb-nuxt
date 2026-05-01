@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Lovely Groovy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('/fonts/lovely-groovy.woff') format('woff');
+}
+
+body {
+  font-family: $font-body;
+  font-size: 1.2em;
+  color: $color-text;
+  background-color: $color-bg;
+  animation: fadein 0.5s;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
