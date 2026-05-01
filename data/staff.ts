@@ -49,7 +49,10 @@ export const staff: StaffMember[] = [
   {
     name: 'Audrey Enyart',
     title: 'Taproom Manager',
-    text: '',
+    text: `Audrey is the architect behind CRB\'s customer experience.
+    As an inside joke, she maintains the rumor that she is a twin.
+    She has been known to close down staff karaoke parties covering 
+    songs she has never heard before.`,
     photo: 'audrey.JPG',
   },
   {

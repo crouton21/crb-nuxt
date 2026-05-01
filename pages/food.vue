@@ -139,7 +139,6 @@ const foodPhotos = [
   }
 
   &__text {
-    font-size: 1rem;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
