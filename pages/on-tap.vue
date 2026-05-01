@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { beers } from '~/data/beers'
-import { naOptions } from '~/data/na-options'
-
 definePageMeta({ dark: true })
+
+const { data: beers, error: beersError, status: beersStatus } = useBeers()
+const { data: naOptions, error: naError, status: naStatus } = useNaOptions()
 
 useSeo({
   title: 'On Tap',
@@ -28,15 +28,19 @@ useSeo({
     <section class="beer-section" aria-labelledby="beers-heading">
       <h1 id="beers-heading" class="section-heading">Beers On Tap</h1>
       <p class="rotating-note">Our tap list rotates frequently — this may not reflect what's currently pouring.</p>
-      <ul class="beer-list">
+      <p v-if="beersStatus === 'pending'" class="rotating-note">Loading...</p>
+      <p v-else-if="beersError" class="rotating-note">Couldn't load tap list right now — check back soon.</p>
+      <ul v-else class="beer-list">
         <BeerCard v-for="beer in beers" :key="beer.name" :beer="beer" />
       </ul>
     </section>
 
     <section class="beer-section" aria-labelledby="na-heading">
       <h2 id="na-heading" class="section-heading">Non-Alcoholic Options</h2>
-      <ul class="beer-list">
-        <BeerCard v-for="option in naOptions" :key="option.name" :beer="{ name: option.name, description: option.description ?? '' }" />
+      <p v-if="naStatus === 'pending'" class="rotating-note">Loading...</p>
+      <p v-else-if="naError" class="rotating-note">Couldn't load options right now — check back soon.</p>
+      <ul v-else class="beer-list">
+        <BeerCard v-for="option in naOptions" :key="option.name" :beer="option" />
       </ul>
     </section>
   </div>
